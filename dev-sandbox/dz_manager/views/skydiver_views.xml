@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="skydiver_form_view" model="ir.ui.view">
+        <field name="name">skydiver.view.form</field>
+        <field name="model">skydiver</field>
+        <field name="arch" type="xml">
+            <form string="Skydiver View">
+                <header></header>
+                <sheet>
+                    <div>
+                        <h1>
+                            <field name="skydiver_name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="contact_id" />
+                        <field name="emergency_contact" />
+                        <field name="license" />
+                        <field name="license_number" />
+                        <field name="license_expiration" />
+                        <field name="jump_number" />
+                    </group>
+                    <notebook>
+                        <page string="Skydiver Log"></page>
+                        <page string="Skydiver Ratings"></page>
+                        <page string="Skydiver Rig Info">
+                            <group>
+                                <field name="container" />
+                                <field name="aad" />
+                                <field name="main_canopy" />
+                                <field name="main_canopy_size" />
+                                <field name="reserve_canopy" />
+                                <field name="reserve_canopy_size" />
+                                <field name="reserve_packed" />
+                                <field name="reserve_expiration" />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="skydiver_view_list" model="ir.ui.view">
+        <field name="name">skydiver.view.list</field>
+        <field name="model">skydiver</field>
+        <field name="arch" type="xml">
+            <tree string="Skydiver List">
+                <field name="skydiver_name" />
+                <field name="license" />
+                <field name="license_number" />
+                <field name="license_expiration" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="skydiver_view_search" model="ir.ui.view">
+        <field name="name">skydiver.view.search</field>
+        <field name="model">skydiver</field>
+        <field name="arch" type="xml">
+            <search string="Skydiver Search">
+                <field name="skydiver_name" />
+                <field name="license" />
+                <field name="license_number" />
+            </search>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="dz_groups_category" model="ir.module.category">
+        <field name="name">DZ Manager</field>
+        <field name="description">DZ Management Tool</field>
+    </record>
+    <record id="group_dz_user" model="res.groups">
+        <field name="name">DZ Manager/User</field>
+        <field name="category_id" ref="dz_groups_category" />
+    </record>
+    <record id="group_dz_admin" model="res.groups">
+        <field name="name">DZ Manager/Admin</field>
+        <field name="implied_ids" eval="[Command.link(ref('group_dz_user'))]" />
+        <field name="category_id" ref="dz_groups_category" />
+    </record>
+</odoo>

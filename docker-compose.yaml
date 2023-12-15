@@ -9,7 +9,7 @@ services:
     volumes:
       - ./enterprise-17.0:/mnt/enterprise
       - ./dev-sandbox:/mnt/dev
-    command: --addons-path=/mnt/enterprise,/mnt/dev -d odoo-vg-test -u estate
+    command: --addons-path=/mnt/enterprise,/mnt/dev -d odoo-dz-dev -u dz_manager
 
   db:
     image: postgres:15

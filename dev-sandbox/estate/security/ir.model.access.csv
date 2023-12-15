@@ -1,4 +1,0 @@
-id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-registry_user,registry user,model_estate_estate,group_registry_user,1,0,1,0
-registry_admin,registry admin,model_estate_estate,group_registry_admin,1,1,1,1
-registry_read_all,registry read all,model_estate_estate,,1,0,0,0
