@@ -11,10 +11,11 @@
     "data": [
         "security/dzm_groups.xml",
         "security/ir.model.access.csv",
-        "views/skydiver_views.xml",
         "views/dz_manager_menu.xml",
+        "views/skydiver_views.xml",
+        "views/rating_view.xml",
     ],
-    "demo": [],
+    "demo": ["data/ratings_data.xml"],
     "license": "AGPL-3",
     "installable": True,
     "auto_install": False,

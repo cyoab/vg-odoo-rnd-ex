@@ -11,12 +11,29 @@
         </field>
     </record>
 
-    <menuitem name="Skydivers"
-        id="menu_skydivers"
+    <record id="ratings_list_action" model="ir.actions.act_window">
+        <field name="name">Ratings</field>
+        <field name="res_model">skydive.rating</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Configure skydive ratings
+            </p>
+        </field>
+    </record>
+
+    <menuitem name="DZ Manager"
+        id="menu_dzm"
         sequence="1"
-        web_icon="skydivers,static/description/icon.png">
-        <menuitem id="menu_skydivers_sub" name="Skydiver Management" sequence="1">
-            <menuitem id="menu_skydiver_registry" name="Skydiver Registry" sequence="2" action="skydiver_list_action"/>
+        web_icon="dz_manager,static/description/icon.png">
+        <menuitem id="menu_dzm_sub" name="Skydiver Management" sequence="1">
+            <menuitem id="menu_dzm_registry" name="Skydivers" sequence="1"
+                action="skydiver_list_action" />
+        </menuitem>
+        <menuitem id="menu_dzm_config" name="Configuration" sequence="2">
+            <menuitem id="menu_dzm_config_settings" name="Settings" sequence="1" />
+            <menuitem id="menu_dzm_config_ratings" name="Ratings" sequence="2"
+                action="ratings_list_action" />
         </menuitem>
     </menuitem>
 </odoo>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+        <record id="rating_01" model="skydiver.rating">
+            <field name="rating_name">AFF-I</field>
+            <field name="rating_type">Instructor</field>
+        </record>
+        <record id="rating_02" model="skydiver.rating">
+            <field name="rating_name">IAD-I</field>
+            <field name="rating_type">Instructor</field>
+        </record>
+        <record id="rating_03" model="skydiver.rating">
+            <field name="rating_name">SL-I</field>
+            <field name="rating_type">Instructor</field>
+        </record>
+        <record id="rating_04" model="skydiver.rating">
+            <field name="rating_name">TAN-I</field>
+            <field name="rating_type">Instructor</field>
+        </record>
+        <record id="rating_05" model="skydiver.rating">
+            <field name="rating_name">Coach</field>
+            <field name="rating_type">Coach</field>
+        </record>
+        <record id="rating_06" model="skydiver.rating">
+            <field name="rating_name">PRO</field>
+            <field name="rating_type">PRO</field>
+        </record>
+        <record id="rating_07" model="skydiver.rating">
+            <field name="rating_name">CE</field>
+            <field name="rating_type">Examiner</field>
+        </record>
+        <record id="rating_08" model="skydiver.rating">
+            <field name="rating_name">AFF-E</field>
+            <field name="rating_type">Examiner</field>
+        </record>
+        <record id="rating_09" model="skydiver.rating">
+            <field name="rating_name">IAD-E</field>
+            <field name="rating_type">Examiner</field>
+        </record>
+        <record id="rating_10" model="skydiver.rating">
+            <field name="rating_name">SL-E</field>
+            <field name="rating_type">Examiner</field>
+        </record>
+        <record id="rating_11" model="skydiver.rating">
+            <field name="rating_name">TAN-E</field>
+            <field name="rating_type">Examiner</field>
+        </record>
+    </data>
+</odoo>

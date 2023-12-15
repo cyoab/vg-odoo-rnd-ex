@@ -19,11 +19,11 @@
                         <field name="license_number" />
                         <field name="license_expiration" />
                         <field name="jump_number" />
+                        <field name="skydiver_ratings" />
                     </group>
                     <notebook>
                         <page string="Skydiver Log"></page>
-                        <page string="Skydiver Ratings"></page>
-                        <page string="Skydiver Rig Info">
+                        <page string="Rig Info">
                             <group>
                                 <field name="container" />
                                 <field name="aad" />
@@ -50,6 +50,7 @@
                 <field name="license" />
                 <field name="license_number" />
                 <field name="license_expiration" />
+                <field name="jump_number" />
             </tree>
         </field>
     </record>
@@ -62,6 +63,7 @@
                 <field name="skydiver_name" />
                 <field name="license" />
                 <field name="license_number" />
+                <field name="jump_number" />
             </search>
         </field>
     </record>

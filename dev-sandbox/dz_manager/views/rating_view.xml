@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rating_form_view" model="ir.ui.view">
+        <field name="name">rating.view.form</field>
+        <field name="model">skydive.rating</field>
+        <field name="arch" type="xml">
+            <form string="Ratings View">
+                <header></header>
+                <sheet>
+                    <group>
+                        <field name="rating_name" />
+                        <field name="rating_type" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="rating_view_list" model="ir.ui.view">
+        <field name="name">rating.view.list</field>
+        <field name="model">skydive.rating</field>
+        <field name="arch" type="xml">
+            <tree string="Skydive Ratings List">
+                <field name="rating_name" />
+                <field name="rating_type" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="rating_view_search" model="ir.ui.view">
+        <field name="name">rating.view.search</field>
+        <field name="model">skydive.rating</field>
+        <field name="arch" type="xml">
+            <search string="Skydive Rating Search">
+                <field name="rating_name" />
+                <field name="rating_type" />
+            </search>
+        </field>
+    </record>
+</odoo>

@@ -1,1 +1,1 @@
-from . import skydiver
+from . import skydiver, rating
