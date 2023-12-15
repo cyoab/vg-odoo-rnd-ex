@@ -8,9 +8,8 @@ services:
       - "8069:8069"
     volumes:
       - ./enterprise-17.0:/mnt/enterprise
-      # - /path/to/addons2:/mnt/extra-addons2
-    #command: --addons-path=/mnt/extra-addons1,/mnt/extra-addons2
-    command: --addons-path=/mnt/enterprise
+      - ./dev-sandbox:/mnt/dev
+    command: --addons-path=/mnt/enterprise,/mnt/dev
 
   db:
     image: postgres:15
