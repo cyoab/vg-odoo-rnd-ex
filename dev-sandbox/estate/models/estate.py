@@ -2,6 +2,7 @@ from odoo import models, fields
 
 class Estate(models.Model):
     _name = "estate.estate"
+    _description = "Real Estate model"
 
     name = fields.Char(string="Estate name", default="New", required=True)
     salesperson_id = fields.Many2one(comodel_name="res.users", string="Salesperson", required=True)
@@ -34,6 +35,3 @@ class Estate(models.Model):
     # Land details
     land_area = fields.Integer(string="Land Area (m²)")
     land_type = fields.Selection(selection=[('building', 'Building'), ('agricultural', 'Agricultural')], string="Land Type")
-
-
-

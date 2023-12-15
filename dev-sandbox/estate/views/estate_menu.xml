@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="motorcycle_registry_form_view" model="ir.ui.view">
+        <field name="name">estate_estate.view.form</field>
+        <field name="model">estate.estate</field>
+        <field name="arch" type="xml">
+            <form string="Real Estate View">
+                <header></header>
+                <sheet>
+                    <div>
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <separator string="Base Info" />
+                            <field name="salesperson_id" />
+                            <field name="estate_type" />
+                            <field name="price" />
+                            <field name="status" />
+                            <field name="buyer_id" />
+                        </group>
+                        <notebook>
+                            <page string="Estate Details">
+                                <group>
+                                    <field name="street" />
+                                    <field name="zip" />
+                                    <field name="city" />
+                                    <field name="state_id" />
+                                    <field name="country_id" />
+                                    <field name="house_number" />
+                                </group>
+                            </page>
+                            <page string="House details">
+                                <group>
+                                    <field name="description" />
+                                    <field name="bedrooms" />
+                                    <field name="living_area" />
+                                    <field name="garden_area" />
+                                    <field name="garden_orientation" />
+                                    <field name="active" />
+                                </group>
+                                <group>
+                                    <field name="land_area" />
+                                    <field name="land_type" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="motorcycle_registry_view_list" model="ir.ui.view">
+        <field name="name">motorcycle_registry.view.list</field>
+        <field name="model">motorcycle.registry</field>
+        <field name="arch" type="xml">
+            <tree string="Motorcycle Registry List">
+                <field name="registry_number" />
+                <field name="vin" />
+                <field name="make" />
+                <field name="model" />
+                <field name="license_plate" />
+                <field name="owner_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="motorcycle_registry_view_search" model="ir.ui.view">
+        <field name="name">motorcycle_registry.view.search</field>
+        <field name="model">motorcycle.registry</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="registry_number" />
+                <field name="vin" />
+                <field name="owner_id" />
+                <field name="license_plate" />
+                <filter name="filter_registry_date" date="registry_date" string="Registration Date" />
+                <filter name="groupby_registry_date" string="Registration Date"
+                    context="{'group_by': 'registry_date'}" />
+            </search>
+        </field>
+    </record>
+</odoo>
