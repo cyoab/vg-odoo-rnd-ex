@@ -1,39 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="skydiver_list_action" model="ir.actions.act_window">
-        <field name="name">Skydivers</field>
-        <field name="res_model">skydiver</field>
-        <field name="view_mode">tree,form</field>
-        <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">
-                Create your first skydiver
-            </p>
-        </field>
-    </record>
-
-    <record id="ratings_list_action" model="ir.actions.act_window">
-        <field name="name">Ratings</field>
-        <field name="res_model">skydive.rating</field>
-        <field name="view_mode">tree,form</field>
-        <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">
-                Configure skydive ratings
-            </p>
-        </field>
-    </record>
 
     <menuitem name="DZ Manager"
-        id="menu_dzm"
+        id="menu_dzm_root"
         sequence="1"
         web_icon="dz_manager,static/description/icon.png">
-        <menuitem id="menu_dzm_sub" name="Skydiver Management" sequence="1">
-            <menuitem id="menu_dzm_registry" name="Skydivers" sequence="1"
+
+
+        <menuitem id="menu_dzm_skydivers_management" name="Skydiver Management" sequence="1">
+            <menuitem id="menu_dzm_skydivers" name="Skydivers" sequence="2"
                 action="skydiver_list_action" />
-        </menuitem>
-        <menuitem id="menu_dzm_config" name="Configuration" sequence="2">
-            <menuitem id="menu_dzm_config_settings" name="Settings" sequence="1" />
-            <menuitem id="menu_dzm_config_ratings" name="Ratings" sequence="2"
+            <menuitem id="menu_dzm_skydive_ratings" name="Skydive Ratings" sequence="3"
                 action="ratings_list_action" />
         </menuitem>
+
     </menuitem>
 </odoo>

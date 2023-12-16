@@ -6,6 +6,7 @@ from datetime import timedelta
 class Skydiver(models.Model):
     _name = "skydiver"
     _description = "Skydiver Model"
+    _inherit = ["mail.thread", "mail.activity.mixin"]
 
     _rec_name = "skydiver_name"
     _sql_constraints = [
@@ -48,11 +49,12 @@ class Skydiver(models.Model):
     license_expiration = fields.Date(string="License Expiration")
     # ratings should be a category field and disable creation
     skydiver_ratings = fields.Many2many(
-        "skydiver.rating",
+        "skydive.rating",
         string="Ratings",
     )
     # ratings = fields.Many2many("skydiver.rating", string="Ratings")
     jump_number = fields.Integer(string="Jump Number", required=True)
+    account_balance = fields.Float(string="Account Balance", readonly=True)
 
     # Rig info
     container = fields.Char(string="Container")

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="ratings_list_action" model="ir.actions.act_window">
+        <field name="name">Ratings</field>
+        <field name="res_model">skydive.rating</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Configure skydive ratings
+            </p>
+        </field>
+    </record>
+
+
     <record id="rating_form_view" model="ir.ui.view">
         <field name="name">rating.view.form</field>
         <field name="model">skydive.rating</field>
